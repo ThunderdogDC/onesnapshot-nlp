@@ -1,0 +1,2 @@
+[filter "strip-nb-output"]
+        clean = "bash -c 'export JUPYTER_CONFIG_DIR=${HOME}/.jupyter_conf && jupyter nbconvert --ClearOutputPreprocessor.enabled=True --to=notebook --stdin --stdout --log-level=ERROR'"
