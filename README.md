@@ -28,18 +28,13 @@ without exposing internal business information.
 
 ## Current Limitations
 
+## Current Limitations
+
 This public repository version is not currently fully executable outside of the original organisational environment.
 
-The original project depends on a small number of organisation-specific Python packages, including internal utilities used for functionality such as AWS integration and experiment workflows. These dependencies are not publicly available and have therefore not been included in this repository.
+The project depends on a small number of organisation-specific Python packages, including internal utility libraries used for supporting functionality such as AWS integration and experiment workflows. These packages are not publicly distributed, so the full environment cannot currently be recreated from this repository alone.
 
-The core NLP experimentation framework, model evaluation approaches, configuration structure, and documentation are available for review. Work is ongoing to remove or replace internal dependencies with publicly available alternatives so that the full pipeline can be reproduced in a standalone environment.
-
-Until those changes are complete:
-
-- the repository can be inspected and extended,
-- the architecture and modelling approaches can be reviewed,
-- some components may run after installing available public dependencies,
-- full end-to-end execution requires access to the original organisational packages.
+The core NLP experimentation framework, evaluation approaches, configuration structure, and documentation are available for review. Future work may replace or isolate these dependencies to enable a fully standalone installation.
 
 ---
 
