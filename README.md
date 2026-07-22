@@ -28,8 +28,6 @@ without exposing internal business information.
 
 ## Current Limitations
 
-## Current Limitations
-
 This public repository version is not currently fully executable outside of the original organisational environment.
 
 The project depends on a small number of organisation-specific Python packages, including internal utility libraries used for supporting functionality such as AWS integration and experiment workflows. These packages are not publicly distributed, so the full environment cannot currently be recreated from this repository alone.
@@ -82,8 +80,7 @@ onesnapshot-nlp/
 │
 ├── docs/
 │   ├── architecture.md
-│   ├── experiments.md
-│   └── testing.md
+│   └── experiments.md
 │
 ├── pyproject.toml
 ├── setup.sh
@@ -93,9 +90,7 @@ onesnapshot-nlp/
 ---
 
 
-with something like:
 
-```markdown
 
 ## Installation
 
