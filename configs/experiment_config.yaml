@@ -1,0 +1,38 @@
+---
+# Data configs
+ws_dataset: "workstream_objectives_v8.csv"
+ev_dataset: "evidence_library_records_v1.csv"
+evaluation_dataset: "manual_mapping_corrected.csv"
+
+# Columns in evidence library to keep in any outputs
+ev_cols_to_keep:
+  - "ID"
+  - "DG Group"
+  - "Directorates"
+  - "Arms length body"
+  - "Title"
+  - "Description"
+
+# Models
+bi_encoder: "all-mpnet-base-v2"
+reranker: "ms-marco-MiniLM-L-6-v2"
+nli: "DeBERTa-v3-large-mnli-fever-anli-ling-wanli"
+llm_id: "eu.anthropic.claude-haiku-4-5-20251001-v1:0"
+
+# llm inputs
+llm_prompt_config_path: "configs/llm_prompt_config.yaml"
+llm_response_keys_required: ["rankings", "justification"] # these are used for llm output validation
+
+# Pipeline
+pipeline:
+  - name: hardcode
+  - name: bi_encoder
+    top_k: 5
+  - name: llm
+    top_k: 5 # top_k for LLMs refers to the input workstreams used in the prompt
+
+# Evaluation configs
+true_label_col: "manual_workstream_mapping" # the column name that holds true labels in evaluation_dataset
+include_support: True # Whether to include support workstreams 
+predict_non_eval: False # whether to generate predictions for evidence records we don't have labels for
+save_experiment: False

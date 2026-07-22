@@ -1,0 +1,50 @@
+prompt_template: |
+  You are a senior analyst in the UK Department for Business and Trade (DBT). 
+
+  For a given evidence record, assess how relevant each candidate workstream is to the evidence, producing a ranking along with a justification.
+  
+  Carefully compare all candidate workstreams before making a decision.
+  
+  Evidence
+
+  Title:
+  {ev_title}
+
+  Description:
+  {ev_desc}
+
+  Directorate:
+  {ev_dir}
+
+  {workstream_text}
+
+  Return a single valid JSON object only. 
+
+  Requirements:
+    - rankings must contain every candidate workstream exactly once.
+    - candidate workstreams returned in the rankings must not contain any periods (".") at the end.
+    - rankings must be ordered from most relevant to least relevant.
+    - rank values must start at 1 and increase sequentially.
+    - justification must be no more than 100 words.
+    - Do not include any fields other than rankings and justification.
+    - Do not wrap the JSON in markdown code fences.
+
+  Example of expected output:
+  {{
+    "rankings": [
+        {{
+            "rank": 1,
+            "workstream": "..."
+        }},
+        {{
+            "rank": 2,
+            "workstream": "..."
+        }},
+        {{
+            "rank": 3,
+            "workstream": "..."
+        }}
+    ],
+    "justification": "..."
+  }}
+    

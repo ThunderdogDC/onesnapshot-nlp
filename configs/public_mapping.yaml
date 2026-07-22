@@ -1,0 +1,35 @@
+# ALB stands for arms-length body
+alb_map:
+  organisation_a:
+    - "4 - SME Growth Support"
+    - "8 - Investment Attraction Programme"
+
+  organisation_b:
+    - "3 - Regulatory Modernisation"
+
+  organisation_c:
+    - "10 - Supply Chain Resilience"
+
+
+directorate_map:
+  Customer Operations:
+    - "2 - Customer Experience Improvement"
+
+  Innovation Team:
+    - "6 - AI Adoption Initiative"
+    - "7 - Innovation Accelerator"
+
+  Business Growth:
+    - "4 - SME Growth Support"
+    - "9 - Export Growth Programme"
+
+  Strategy Division:
+    - "1 - Digital Transformation Programme"
+
+  Corporate Services:
+    - "Finance"
+    - "People Services"
+    - "Technology Services"
+
+  Project Delivery:
+    - "Project Delivery Office"
