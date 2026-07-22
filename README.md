@@ -24,6 +24,24 @@ examples while preserving the structure and behaviour of the system.
 This allows the architecture and implementation to be shared
 without exposing internal business information.
 
+---
+
+## Current Limitations
+
+This public repository version is not currently fully executable outside of the original organisational environment.
+
+The original project depends on a small number of organisation-specific Python packages, including internal utilities used for functionality such as AWS integration and experiment workflows. These dependencies are not publicly available and have therefore not been included in this repository.
+
+The core NLP experimentation framework, model evaluation approaches, configuration structure, and documentation are available for review. Work is ongoing to remove or replace internal dependencies with publicly available alternatives so that the full pipeline can be reproduced in a standalone environment.
+
+Until those changes are complete:
+
+- the repository can be inspected and extended,
+- the architecture and modelling approaches can be reviewed,
+- some components may run after installing available public dependencies,
+- full end-to-end execution requires access to the original organisational packages.
+
+---
 
 ## Project Goal
 
@@ -79,19 +97,18 @@ onesnapshot-nlp/
 
 ---
 
+
+with something like:
+
+```markdown
+
 ## Installation
 
-From the project root:
+The original project used an organisation-specific setup script to recreate its development environment. This script relied on internal package sources and cached environments that are not available in this public repository.
 
-```bash
-. setup.sh
-```
+A standalone public installation workflow is currently being prepared.
 
-To recreate the environment after dependency changes:
-
-```bash
-. setup.sh recreate
-```
+The current environment definition can be inspected in `pyproject.toml`, but full installation requires access to the original organisational dependencies.
 
 ---
 
