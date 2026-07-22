@@ -1,0 +1,95 @@
+{
+  "ws-v8_ev-v1_hc_be-mpnetB-k5_llm-sonnet-k3_scope-all": {
+    "experiment_number": 1,
+    "workstream_descriptions": "workstream_objectives_v8.csv",
+    "evidence_records": "evidence_library_records_v1.csv",
+    "evaluation_dataset": "manual_mapping_corrected.csv",
+    "include_non_odp": true,
+    "pipeline": [
+      {
+        "step": "hardcode"
+      },
+      {
+        "step": "bi_encoder",
+        "model": "all-mpnet-base-v2",
+        "top_k": 5
+      },
+      {
+        "step": "llm",
+        "model": "eu.anthropic.claude-sonnet-4-6",
+        "top_k": 3
+      }
+    ],
+    "accuracy": 0.89,
+    "macro_precision": 0.89,
+    "macro_recall": 0.9,
+    "macro_f1_score": 0.89,
+    "recall_at_1": 0.89,
+    "recall_at_2": 0.96,
+    "recall_at_3": 0.96,
+    "recall_at_4": 0.96,
+    "recall_at_5": 0.96
+  },
+  "ws-v8_ev-v1_hc_be-mpnetB-k5_llm-sonnet-k5_scope-all": {
+    "experiment_number": 2,
+    "workstream_descriptions": "workstream_objectives_v8.csv",
+    "evidence_records": "evidence_library_records_v1.csv",
+    "evaluation_dataset": "manual_mapping_corrected.csv",
+    "include_non_odp": true,
+    "pipeline": [
+      {
+        "step": "hardcode"
+      },
+      {
+        "step": "bi_encoder",
+        "model": "all-mpnet-base-v2",
+        "top_k": 5
+      },
+      {
+        "step": "llm",
+        "model": "eu.anthropic.claude-sonnet-4-6",
+        "top_k": 5
+      }
+    ],
+    "accuracy": 0.89,
+    "macro_precision": 0.9,
+    "macro_recall": 0.91,
+    "macro_f1_score": 0.9,
+    "recall_at_1": 0.89,
+    "recall_at_2": 0.96,
+    "recall_at_3": 0.98,
+    "recall_at_4": 0.98,
+    "recall_at_5": 0.98
+  },
+  "ws-v8_ev-v1_hc_be-mpnetB-k5_llm-haiku-k5_scope-all": {
+    "experiment_number": 3,
+    "workstream_descriptions": "workstream_objectives_v8.csv",
+    "evidence_records": "evidence_library_records_v1.csv",
+    "evaluation_dataset": "manual_mapping_corrected.csv",
+    "include_non_odp": true,
+    "pipeline": [
+      {
+        "step": "hardcode"
+      },
+      {
+        "step": "bi_encoder",
+        "model": "all-mpnet-base-v2",
+        "top_k": 5
+      },
+      {
+        "step": "llm",
+        "model": "eu.anthropic.claude-haiku-4-5-20251001-v1:0",
+        "top_k": 5
+      }
+    ],
+    "accuracy": 0.92,
+    "macro_precision": 0.95,
+    "macro_recall": 0.91,
+    "macro_f1_score": 0.93,
+    "recall_at_1": 0.92,
+    "recall_at_2": 0.96,
+    "recall_at_3": 0.97,
+    "recall_at_4": 0.97,
+    "recall_at_5": 0.97
+  }
+}
